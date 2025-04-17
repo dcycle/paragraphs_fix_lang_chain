@@ -1,0 +1,5 @@
+name: Paragraphs Fix Language Chain
+type: module
+description: See https://www.drupal.org/project/paragraphs/issues/3519174.
+core_version_requirement: ^10 || ^11
+php: '8.x'

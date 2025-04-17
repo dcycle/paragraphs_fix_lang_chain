@@ -1,0 +1,4 @@
+---
+services:
+  paragraphs_fix_lang_chain:
+    class: Drupal\paragraphs_fix_lang_chain\ParagraphsFixLangChain\ParagraphsFixLangChain
