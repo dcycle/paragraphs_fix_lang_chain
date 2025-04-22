@@ -34,7 +34,18 @@ You will now see something like this:
       'errors' => [],
       'entity' => 'node:1',
       'paragraph_fields' => [
-        '',
+
+      ],
+      'langs' => [
+        'en' => [
+          'source' => 'und',
+        ],
+        'af' => [
+          'source' => 'en',
+        ],
+        'ca' => [
+          'source' => 'af',
+        ],
       ]
     ]
 
