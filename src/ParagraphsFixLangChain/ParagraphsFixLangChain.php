@@ -105,14 +105,14 @@ class ParagraphsFixLangChain {
     bool $simulate = FALSE,
   ) : array {
     if ($simulate) {
-      return ['SIMULATING changing the lang of paragraph ' . $para_id . "'s " . $lang . ' to ' . $source];
+      return ['SIMULATING changing the SOURCE lang of paragraph ' . $para_id . "'s " . $lang . ' to ' . $source];
     }
     $entity = $this->entityTypeManager()->getStorage('paragraph')->load($para_id);
     $translatedEntity = $entity->getTranslation($lang);
     $metadata = $this->contentTranslationManager()->getTranslationMetadata($translatedEntity);
     $metadata->setSource($source);
     $entity->save();
-    return ['CHANGED the lang of paragraph ' . $para_id . "'s " . $lang . ' to ' . $source];
+    return ['CHANGED the SOURCE lang of paragraph ' . $para_id . "'s " . $lang . ' to ' . $source];
   }
 
   public function populateLangChain($info) : array {
