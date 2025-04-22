@@ -80,6 +80,7 @@ class EntityAnalyzerExists extends EntityAnalyzerBase {
     foreach ($languages as $lg) {
       $translatedEntity = $this->entity->getTranslation($lg);
       $metadata = $this->contentTranslationManager()->getTranslationMetadata($translatedEntity);
+
       $source = $metadata->getSource();
       $ret[$lg] = [
         'source' => $source,
