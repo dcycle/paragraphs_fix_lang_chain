@@ -80,18 +80,24 @@ class ParagraphsFixLangChain {
     $child_langchain = $this->populateLangChain($child);
 
     if (array_keys($parent_langchain) != array_keys($child_langchain)) {
-      throw new \Exception('The parent and child langchains do not match');
+      $ret[] = 'The parent and child langchains do have the same keys';
+      $ret[] = 'parent is:';
+      $ret[] = $parent_langchain;
+      $ret[] = 'child is:';
+      $ret[] = $child_langchain;
+      $ret[] = 'We cannot currently fix this';
     }
-
-    foreach ($parent_langchain as $plang => $psource) {
-      if ($child_langchain[$plang] == $psource) {
-        $ret[] = 'For ' . $plang . ', no change needed as the source is the same (' . $psource . ') for the child and parent';
-      }
-      else {
-        $csource = $child_langchain[$plang];
-        $ret[] = 'For ' . $plang . ', the parent source is ' . $psource . ' and the child (' . $child['entity'] . ') source is ' . $csource . '. This should be fixed.';
-        $paragraph_id = explode(':', $child['entity'])[1];
-        $ret = array_merge($ret, $this->set($paragraph_id, $plang, $psource, $simulate));
+    else {
+      foreach ($parent_langchain as $plang => $psource) {
+        if ($child_langchain[$plang] == $psource) {
+          $ret[] = 'For ' . $plang . ', no change needed as the source is the same (' . $psource . ') for the child and parent';
+        }
+        else {
+          $csource = $child_langchain[$plang];
+          $ret[] = 'For ' . $plang . ', the parent source is ' . $psource . ' and the child (' . $child['entity'] . ') source is ' . $csource . '. This should be fixed.';
+          $paragraph_id = explode(':', $child['entity'])[1];
+          $ret = array_merge($ret, $this->set($paragraph_id, $plang, $psource, $simulate));
+        }
       }
     }
 
