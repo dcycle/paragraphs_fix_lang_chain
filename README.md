@@ -45,14 +45,18 @@ You will now see something like this:
                         [source] => und
                         [field_values] => Array
                             (
-                                [0] => Array
+                                [field_paragraphs] => Array
                                     (
-                                        [paragraph_id] => 5
-                                    )
+                                        [0] => Array
+                                            (
+                                                [paragraph_id] => 5
+                                            )
 
-                                [1] => Array
-                                    (
-                                        [paragraph_id] => 6
+                                        [1] => Array
+                                            (
+                                                [paragraph_id] => 6
+                                            )
+
                                     )
 
                             )
@@ -64,14 +68,18 @@ You will now see something like this:
                         [source] => en
                         [field_values] => Array
                             (
-                                [0] => Array
+                                [field_paragraphs] => Array
                                     (
-                                        [paragraph_id] => 5
-                                    )
+                                        [0] => Array
+                                            (
+                                                [paragraph_id] => 5
+                                            )
 
-                                [1] => Array
-                                    (
-                                        [paragraph_id] => 6
+                                        [1] => Array
+                                            (
+                                                [paragraph_id] => 6
+                                            )
+
                                     )
 
                             )
@@ -83,14 +91,18 @@ You will now see something like this:
                         [source] => af
                         [field_values] => Array
                             (
-                                [0] => Array
+                                [field_paragraphs] => Array
                                     (
-                                        [paragraph_id] => 5
-                                    )
+                                        [0] => Array
+                                            (
+                                                [paragraph_id] => 5
+                                            )
 
-                                [1] => Array
-                                    (
-                                        [paragraph_id] => 6
+                                        [1] => Array
+                                            (
+                                                [paragraph_id] => 6
+                                            )
+
                                     )
 
                             )

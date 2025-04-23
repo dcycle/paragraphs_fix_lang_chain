@@ -118,10 +118,12 @@ class EntityAnalyzerExists extends EntityAnalyzerBase {
   public function translatedEntityParagraphFieldValues(
     $translatedEntity,
   ) {
+    $ret = [];
     $fields = $this->getParagraphFields();
     foreach ($fields as $field) {
-      return $this->getParagraphFieldValue($translatedEntity, $field);
+      $ret[$field] = $this->getParagraphFieldValue($translatedEntity, $field);
     }
+    return $ret;
   }
 
 }
